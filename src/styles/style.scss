@@ -9,14 +9,37 @@ body{
 	color: #fff;
 	background-color: #000;
 	overflow-x: hidden;
+	user-select: none;
+}
+a{
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
 }
 
+button{
+	background: inherit;
+	border: none;
+	color: inherit;
+}
 
+ul li{
+	list-style: none;
+	
+}
+
+.container{
+	max-width: 1200px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
 
 %header-list-items{
+
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 100%;
+	transition: all 0.3s;
 }
 
 %main-title {
@@ -51,9 +74,10 @@ body{
 	text-align: center;
 	padding: 12px 20px;
 	border-radius: 10px;
+	transition: all 0.5s;
  }
 
- %btn-header{
+ %btn-all{
 	cursor: pointer;
 	font-weight: 600;
 	font-size: 16px;
@@ -61,4 +85,100 @@ body{
 	text-align: center;
 	padding: 20px 30px;
 	border-radius: 10px;
+	transition: all 0.3s;
  }
+
+ .header {
+	margin-top: 20px;
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+	}
+
+	&__nav {
+		ul{
+			display: flex;
+			li{
+				margin-right: 30px;
+			}
+		}
+		a{
+			@extend %header-list-items;
+			&:hover{
+				text-shadow: 7px 3px 8px #fff;
+			}
+		}
+	}
+
+	&__btns {
+		button{
+			@extend %btn-header;
+			margin: 0 6px;
+			
+		}
+	}
+
+	&__btn-ghost {
+		border: 1px solid #fff;
+		&:hover{
+			background-color: #ffffff32;
+		}
+	}
+
+	&__btn-fill {
+		background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+		background-size: 200%;
+		&:hover{
+			background-size: 100%;
+		}
+	}
+}
+
+.main {
+	position: relative;
+	swg{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__wrapper {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		max-width: 800px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;	
+	}
+
+	&__title {
+		@extend %main-title;
+		margin-bottom: 16px;
+		text-align: center;
+	}
+
+	&__subtitle {
+		@extend %subtitle;
+		max-width: 600px;
+		text-align: center;
+		margin-bottom: 32px;
+	}
+
+	&__btn {
+		@extend %btn-all;
+		background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+		background-size: 200%;
+		&:hover{
+			background-size: 100%;
+		}
+	}
+	
+}
+

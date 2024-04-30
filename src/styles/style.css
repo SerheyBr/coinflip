@@ -10,4 +10,141 @@ body {
   color: #fff;
   background-color: #000;
   overflow-x: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  background: inherit;
+  border: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header__nav a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  transition: all 0.3s;
+}
+
+.main__title {
+  font-weight: 900;
+  font-size: 85px;
+  line-height: 130%;
+}
+
+.main__subtitle {
+  font-size: 16px;
+  line-height: 150%;
+  color: #898ca9;
+}
+
+.header__btns button {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.main__btn {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.header {
+  margin-top: 20px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav ul {
+  display: flex;
+}
+.header__nav ul li {
+  margin-right: 30px;
+}
+.header__nav a:hover {
+  text-shadow: 7px 3px 8px #fff;
+}
+.header__btns button {
+  margin: 0 6px;
+}
+.header__btn-ghost {
+  border: 1px solid #fff;
+}
+.header__btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.1960784314);
+}
+.header__btn-fill {
+  background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+  background-size: 200%;
+}
+.header__btn-fill:hover {
+  background-size: 100%;
+}
+
+.main {
+  position: relative;
+}
+.main swg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main__wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__content {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__title {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.main__subtitle {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.main__btn {
+  background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+  background-size: 200%;
+}
+.main__btn:hover {
+  background-size: 100%;
 }
