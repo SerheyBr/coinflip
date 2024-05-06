@@ -51,13 +51,13 @@ ul li {
   line-height: 130%;
 }
 
-.investment__title {
+.support__title, .investment__title {
   font-weight: 900;
   font-size: 50px;
   line-height: 130%;
 }
 
-.investment__subtitle, .columns-item__subtitle, .main__subtitle {
+.support__subtitle, .investment__subtitle, .columns-item__subtitle, .main__subtitle {
   font-size: 16px;
   line-height: 150%;
   color: #898ca9;
@@ -74,7 +74,7 @@ ul li {
   transition: all 0.5s;
 }
 
-.investment__btn, .main__btn {
+.support__btn, .investment__btn, .main__btn {
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
@@ -173,41 +173,14 @@ ul li {
   height: 100%;
   z-index: 1;
 }
-.background-main__ellipse-small {
-  position: absolute;
-  top: 67%;
-  left: 42%;
-  width: 1159px;
-  height: 579px;
-  border-radius: 100%;
-  border: 1px solid #484848;
-  transform: rotate(12deg) translate(-50%, -50%);
-}
-.background-main__ellipse-middle {
-  position: absolute;
-  top: 69%;
-  left: 39%;
-  width: 1440px;
-  height: 816px;
-  border-radius: 100%;
-  border: 1px solid #484848;
-  transform: rotate(12deg) translate(-50%, -50%);
-}
-.background-main__ellipse-big {
-  position: absolute;
-  top: 84%;
-  left: 28%;
-  width: 2321px;
-  height: 1160px;
-  border-radius: 100%;
-  border: 1px solid #484848;
-  transform: rotate(12deg) translate(-50%, -50%);
+.background-main svg {
+  overflow: visible;
 }
 .background-main__glow-green {
   position: absolute;
   top: -105px;
   left: 53px;
-  z-index: 2;
+  z-index: 1;
   width: 246px;
   height: 282px;
   border-radius: 50%;
@@ -218,7 +191,7 @@ ul li {
   position: absolute;
   top: 92px;
   right: 0px;
-  z-index: 2;
+  z-index: 1;
   width: 550px;
   height: 660px;
   border-radius: 50%;
@@ -235,27 +208,6 @@ ul li {
   border-radius: 50%;
   background: linear-gradient(-114deg, #ffc56f 0%, #6d1400 100%);
   box-shadow: inset 15px -3px 25px 0 rgba(159, 9, 9, 0.76), inset -2px 1px 8px 0 #ffd4a0;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes circle-orange {
-  12% {
-    transform: translate(200px, 170px);
-  }
-  25% {
-    transform: translate(400px, 217px);
-  }
-  37% {
-    transform: translate(700px, 100px);
-  }
-  50% {
-    transform: translate(1102px, 0px);
-  }
-  100% {
-    transform: translate(1102px, 0px);
-  }
 }
 .background-main__circle-blue {
   position: absolute;
@@ -268,9 +220,66 @@ ul li {
   background: linear-gradient(111deg, #decaff 0%, #691ee2 51%);
   box-shadow: inset -35px -50px 80px 0 rgba(172, 60, 225, 0.76), inset 0 20px 40px 0 rgba(194, 255, 255, 0.25), inset 0 0 24px 0 rgba(255, 255, 255, 0.26);
 }
-
-.background-main.animation .background-main__circle-orange {
-  animation-name: circle-orange;
+.background-main__star1 {
+  position: absolute;
+  top: 172px;
+  right: 301px;
+  z-index: 2;
+}
+.background-main__star1 svg {
+  fill: #ffffff;
+}
+.background-main__star2 {
+  position: absolute;
+  top: 249px;
+  right: 208px;
+  z-index: 2;
+}
+.background-main__star2 svg {
+  fill: #ffffff;
+  width: 40px;
+  height: 40px;
+}
+.background-main__star3 {
+  position: absolute;
+  top: 81px;
+  left: 208px;
+  z-index: 2;
+}
+.background-main__star3 svg {
+  fill: #ffffff;
+}
+.background-main__img-bitcoin {
+  position: absolute;
+  top: 81px;
+  left: 208px;
+  z-index: 2;
+  width: 100px;
+  height: 100px;
+}
+.background-main__img-bitcoin img {
+  width: 100%;
+  height: 100%;
+}
+.background-main__img-etherium {
+  position: absolute;
+  bottom: 81px;
+  right: 208px;
+  z-index: 2;
+  width: 149px;
+  height: 149px;
+}
+.background-main__img-etherium img {
+  width: 100%;
+  height: 100%;
+}
+.background-main__img-monero {
+  width: 160px;
+  height: 160px;
+}
+.background-main__img-monero img {
+  width: 100%;
+  height: 100%;
 }
 
 .columns {
@@ -357,4 +366,58 @@ ul li {
   width: 200px;
   height: 200px;
   background-color: green;
+}
+
+.support__wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.support__wrapper div {
+  width: 50%;
+}
+.support__img {
+  position: relative;
+}
+.support__img svg {
+  position: relative;
+}
+.support__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 400px;
+  filter: blur(100px);
+}
+.support__glow-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  background: linear-gradient(180deg, #82392c 0%, #d0a22c 100%);
+  width: 500px;
+  height: 500px;
+}
+.support__glow-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 237px;
+  height: 436px;
+  background: linear-gradient(180deg, rgba(255, 79, 24, 0) 0%, #ff4117 100%);
+}
+.support__title {
+  margin-bottom: 16px;
+}
+.support__subtitle {
+  margin-bottom: 32px;
+}
+.support__btn {
+  border: 1px solid white;
+  background-size: 200%;
+}
+.support__btn:hover {
+  background-color: rgba(51, 51, 51, 0.404);
 }
