@@ -51,13 +51,13 @@ ul li {
   line-height: 130%;
 }
 
-.support__title, .investment__title {
+.receive-transmissions__title, .first-step__title, .buysell__title, .support__title, .investment__title {
   font-weight: 900;
   font-size: 50px;
   line-height: 130%;
 }
 
-.support__subtitle, .investment__subtitle, .columns-item__subtitle, .main__subtitle {
+.receive-transmissions__subtitle, .first-step__subtitle, .buysell__subtitle, .support__subtitle, .investment__subtitle, .columns-item__subtitle, .main__subtitle {
   font-size: 16px;
   line-height: 150%;
   color: #898ca9;
@@ -74,7 +74,7 @@ ul li {
   transition: all 0.5s;
 }
 
-.support__btn, .investment__btn, .main__btn {
+.first-step__btn, .support__btn, .investment__btn, .main__btn {
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
@@ -420,4 +420,191 @@ ul li {
 }
 .support__btn:hover {
   background-color: rgba(51, 51, 51, 0.404);
+}
+
+.buysell {
+  position: relative;
+  z-index: 2;
+}
+.buysell__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buysell__title {
+  margin-bottom: 16px;
+  max-width: 800px;
+  text-align: center;
+}
+.buysell__subtitle {
+  margin-bottom: 80px;
+  max-width: 600px;
+  text-align: center;
+}
+.buysell__items {
+  border-radius: 25px;
+  background: #1a1b23;
+  padding: 20px 32px;
+  width: 100%;
+  position: relative;
+}
+.buysell__bg {
+  position: relative;
+}
+.buysell__glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 400px;
+  filter: blur(100px);
+}
+.buysell__glow-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  background: linear-gradient(180deg, rgba(24, 255, 158, 0) 0%, #17ffe3 100%);
+  width: 500px;
+  height: 500px;
+}
+.buysell__glow-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 237px;
+  height: 436px;
+  background: linear-gradient(180deg, #2c4982 0%, #2cd095 100%);
+}
+
+.buysell-item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2b2c3b;
+  padding: 13px 0;
+}
+.buysell-item__name {
+  width: 100%;
+}
+.buysell-item__short-name {
+  color: #b982ff;
+  width: 100%;
+}
+.buysell-item__cost {
+  width: 100%;
+  text-align: right;
+}
+.buysell-item__percent {
+  color: #0dbb7c;
+  width: 100%;
+  text-align: right;
+}
+.buysell-item__graph {
+  margin-left: 32px;
+}
+
+.first-step__wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-step__info {
+  max-width: 600px;
+}
+.first-step__img {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  max-height: 300px;
+}
+.first-step__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.first-step__glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 400px;
+  filter: blur(100px);
+}
+.first-step__glow-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+  background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #ff29c3 100%);
+  width: 600px;
+  height: 600px;
+  filter: blur(200px);
+}
+.first-step__glow-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 275px;
+  height: 391px;
+  background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #174aff 100%);
+  filter: blur(100px);
+}
+.first-step__title {
+  margin-bottom: 16px;
+}
+.first-step__subtitle {
+  margin-bottom: 32px;
+}
+.first-step__btn {
+  background: linear-gradient(225deg, #18c8ff 0%, #933ffe 100%);
+  background-size: 200%;
+}
+.first-step__btn:hover {
+  background-size: 100%;
+}
+
+.receive-transmissions__wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.receive-transmissions__title {
+  margin-bottom: 16px;
+}
+.receive-transmissions__subtitle {
+  margin-bottom: 30px;
+}
+.receive-transmissions__label {
+  border-radius: 10px;
+  padding: 16px 20px;
+  width: 304px;
+  height: 56px;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  box-shadow: inset 0 2px 2px 0 rgba(255, 255, 255, 0.15), inset 0 0 30px 0 rgba(255, 255, 255, 0.05);
+}
+.receive-transmissions input {
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+  background: inherit;
+  border: none;
+}
+.receive-transmissions input::-moz-placeholder {
+  color: #565976;
+}
+.receive-transmissions input::placeholder {
+  color: #565976;
+}
+.receive-transmissions input:focus-visible {
+  outline: none;
 }

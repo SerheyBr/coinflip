@@ -126,10 +126,12 @@ const moneroAnimation = gsap.to(".background-main__img-monero", {
 ScrollTrigger.create({
   animation: orangePlanetAnimation,
   trigger: "",
-  start: "top center",
-  end: "bottom center",
+  start: "top top",
+  end: "bottom", // Анимация будет длиться до конца страницы
   scrub: true,
+  markers: true,
 });
+
 ScrollTrigger.create({
   animation: bluePlanetAnimation,
   trigger: "",
@@ -161,98 +163,97 @@ ScrollTrigger.create({
 
 // background main animation end
 
-// const tl = gsap.timeline();
+const tl = gsap.timeline();
 
-// tl.from(".main__title", {
-//   opacity: 0,
-//   duration: 1,
-//   x: -50,
-// })
-//   .from(".main__subtitle", {
-//     opacity: 0,
-//     duration: 0.5,
-//     x: -50,
-//   })
-//   .to(".main", {
-//     scrollTrigger: {
-//       trigger: ".main", // Элемент, с которого начинается анимация
-//       start: "bottom bottom", // Начальная точка триггера прокрутки
-//       end: "bottom ",
-//       scrub: true,
-//       pin: true,
-//       duration: 10,
-//     },
-//     opacity: 0, // Параметры анимации
-//     scale: 0,
-//   })
-//   .to(".columns", {
-//     scrollTrigger: {
-//       trigger: ".columns", // Элемент, с которого начинается анимация
-//       start: "bottom bottom", // Начальная точка триггера прокрутки
-//       end: "bottom ",
-//       scrub: true,
-//       pin: true,
-//       duration: 20,
-//     },
-//     opacity: 0, // Параметры анимации
-//     scale: 0,
-//   })
-//   .to(".investment", {
-//     scrollTrigger: {
-//       trigger: ".investment", // Элемент, с которого начинается анимация
-//       start: "bottom bottom", // Начальная точка триггера прокрутки
-//       end: "bottom ",
-//       scrub: true,
-//       pin: true,
-//       duration: 20,
-//     },
-//     opacity: 0, // Параметры анимации
-//     scale: 0,
-//   });
+tl.from(".main__title", {
+  opacity: 0,
+  duration: 1,
+  x: -50,
+})
+  .from(".main__subtitle", {
+    opacity: 0,
+    duration: 0.5,
+    x: -50,
+  })
+  .to(".main", {
+    scrollTrigger: {
+      trigger: ".main", // Элемент, с которого начинается анимация
+      start: "bottom bottom", // Начальная точка триггера прокрутки
+      end: "bottom ",
+      scrub: true,
+      pin: true,
+      duration: 10,
+    },
+    opacity: 0, // Параметры анимации
+    scale: 0,
+  })
+  .to(".columns", {
+    scrollTrigger: {
+      trigger: ".columns", // Элемент, с которого начинается анимация
+      start: "bottom bottom", // Начальная точка триггера прокрутки
+      end: "bottom ",
+      scrub: true,
+      pin: true,
+      duration: 20,
+    },
+    opacity: 0, // Параметры анимации
+    scale: 0,
+  })
+  .to(".investment", {
+    scrollTrigger: {
+      trigger: ".investment", // Элемент, с которого начинается анимация
+      start: "bottom bottom", // Начальная точка триггера прокрутки
+      end: "bottom ",
+      scrub: true,
+      pin: true,
+      duration: 20,
+    },
+    opacity: 0, // Параметры анимации
+    scale: 0,
+  });
 
-// gsap.timeline().to(".background-main", {
-//   scrollTrigger: {
-//     trigger: ".support", // Элемент, с которого начинается анимация
-//     start: "top bottom", // Начальная точка триггера прокрутки
-//     end: "+=200 ",
-//     scrub: true,
-//     pin: true,
-//     duration: 20,
-//   },
-//   opacity: 0, // Параметры анимации
-//   scale: 0,
-// });
+gsap.timeline().to(".background-main", {
+  scrollTrigger: {
+    trigger: ".support", // Элемент, с которого начинается анимация
+    start: "top center", // Начальная точка триггера прокрутки
+    end: "bottom",
+    scrub: true,
+    pin: true,
+    duration: 20,
+  },
+  opacity: 0, // Параметры анимации
+  scale: 0,
+});
 
-// gsap.to(".support__glow-1", {
-//   duration: 3,
-//   repeat: -1,
-//   scale: 1.5,
-//   yoyo: true,
-// });
-// gsap.to(".support__glow-2", {
-//   duration: 1,
-//   repeat: -1,
-//   scale: 1.5,
-//   yoyo: true,
-// });
-// gsap.to(".support__svg", {
-//   duration: 10,
-//   repeat: -1,
-//   rotate: 360,
-//   yoyo: true,
-// });
+gsap.to(".support__glow-1", {
+  duration: 3,
+  repeat: -1,
+  scale: 1.5,
+  yoyo: true,
+});
+gsap.to(".support__glow-2", {
+  duration: 1,
+  repeat: -1,
+  scale: 1.5,
+  yoyo: true,
+});
+gsap.to(".support__svg", {
+  duration: 10,
+  repeat: -1,
+  rotate: 360,
+  yoyo: true,
+});
 
-// const tlSupport = gsap.timeline();
+const tlSupport = gsap.timeline();
 
-// tlSupport.from(".support__glow", {
-//   scrollTrigger: {
-//     trigger: ".support",
-//     start: "-150 0",
-//     end: "top",
-//     duration: 20,
-//     //  markers: true,
-//     scrub: true,
-//   },
-//   y: -130,
-//   opacity: 0.7,
-// });
+tlSupport.from(".support__glow", {
+  scrollTrigger: {
+    trigger: ".support",
+    start: "-150 0",
+    end: "top",
+    duration: 20,
+    scrub: true,
+  },
+  y: -130,
+  opacity: 0.7,
+});
