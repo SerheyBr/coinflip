@@ -283,28 +283,28 @@ tlSupport
     },
     opacity: 0,
     scale: 0,
-  })
-  .from(".support__icon", {
-    scrollTrigger: {
-      trigger: ".support",
-      start: "top top",
-      end: "center",
-      duration: 20,
-      scrub: true,
-    },
-    x: -200,
-    scale: 0,
   });
+//   .from(".support__icon", {
+//     scrollTrigger: {
+//       trigger: ".support",
+//       start: "top top",
+//       end: "center",
+//       duration: 20,
+//       scrub: true,
+//     },
+//     x: -200,
+//     scale: 0,
+//   });
 
-gsap.to(".buysell__glow", {
-  duration: 5,
-  scale: 1.5,
-  //   autoAlpha: 0.8,
-  repeat: -1,
-  yoyo: true,
-  repeatDelay: 0.2,
-  x: -200,
-});
+// gsap.to(".buysell__glow", {
+//   duration: 5,
+//   scale: 1.5,
+//   //   autoAlpha: 0.8,
+//   repeat: -1,
+//   yoyo: true,
+//   repeatDelay: 0.2,
+//   x: -200,
+// });
 
 const tlBuysell = gsap.timeline();
 
@@ -348,20 +348,19 @@ tlBuysell
       end: "+=400",
       duration: 10,
       scrub: true,
-      markers: true,
     },
     stagger: 0.2,
     x: 50,
   });
 
-gsap.to(".first-step__glow", {
-  duration: 3,
-  scale: 1.5,
-  //   autoAlpha: 0.8,
-  repeat: -1,
-  yoyo: true,
-  repeatDelay: 0.2,
-});
+// gsap.to(".first-step__glow", {
+//   duration: 3,
+//   scale: 1.5,
+//   //   autoAlpha: 0.8,
+//   repeat: -1,
+//   yoyo: true,
+//   repeatDelay: 0.2,
+// });
 
 const tlfirstStep = gsap.timeline();
 
@@ -387,15 +386,15 @@ tlfirstStep
     },
     x: 20,
     opacity: 0,
-  })
-  .from(".first-step__icon", {
-    scrollTrigger: {
-      trigger: ".first-step",
-      start: "-=600 top",
-      end: "center",
-      duration: 20,
-      scrub: true,
-    },
-    x: 0,
-    scale: 0,
   });
+//   .from(".first-step__icon", {
+//     scrollTrigger: {
+//       trigger: ".first-step",
+//       start: "-=600 top",
+//       end: "center",
+//       duration: 20,
+//       scrub: true,
+//     },
+//     x: 0,
+//     scale: 0,
+//   });
