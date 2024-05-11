@@ -368,6 +368,10 @@ ul li {
   background-color: green;
 }
 
+.support {
+  position: relative;
+  z-index: 2;
+}
 .support__wrapper {
   height: 100vh;
   display: flex;
@@ -506,6 +510,9 @@ ul li {
 .buysell-item__graph {
   margin-left: 32px;
 }
+.buysell-item__svg {
+  transition: all 0.5s;
+}
 
 .positive {
   color: #0dbb7c;
@@ -515,6 +522,10 @@ ul li {
   color: #ff8282;
 }
 
+.first-step {
+  position: relative;
+  z-index: 2;
+}
 .first-step__wrapper {
   height: 100vh;
   display: flex;

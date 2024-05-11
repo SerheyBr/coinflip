@@ -129,7 +129,6 @@ ScrollTrigger.create({
   start: "top top",
   end: "bottom", // Анимация будет длиться до конца страницы
   scrub: true,
-  markers: true,
 });
 
 ScrollTrigger.create({
@@ -182,7 +181,7 @@ tl.from(".main__title", {
       end: "bottom ",
       scrub: true,
       pin: true,
-      duration: 10,
+      // duration: 5,
     },
     opacity: 0, // Параметры анимации
     scale: 0,
@@ -212,11 +211,11 @@ tl.from(".main__title", {
     scale: 0,
   });
 
-gsap.timeline().to(".background-main", {
+gsap.to(".background-main", {
   scrollTrigger: {
     trigger: ".support", // Элемент, с которого начинается анимация
-    start: "top center", // Начальная точка триггера прокрутки
-    end: "bottom",
+    start: "top top", // Начальная точка триггера прокрутки
+    end: "center",
     scrub: true,
     pin: true,
     duration: 20,
@@ -243,17 +242,160 @@ gsap.to(".support__svg", {
   rotate: 360,
   yoyo: true,
 });
+gsap.to(".support__icon", {
+  duration: 10,
+  repeat: -1,
+  //   rotate: 360,
+  yoyo: true,
+});
 
 const tlSupport = gsap.timeline();
 
-tlSupport.from(".support__glow", {
-  scrollTrigger: {
-    trigger: ".support",
-    start: "-150 0",
-    end: "top",
-    duration: 20,
-    scrub: true,
-  },
-  y: -130,
-  opacity: 0.7,
+tlSupport
+  .from(".support", {
+    scrollTrigger: {
+      trigger: ".support",
+      start: "top center",
+      end: "bottom",
+      duration: 20,
+      scrub: true,
+    },
+    opacity: 0,
+    scale: 0.9,
+  })
+  .from(".support__glow", {
+    scrollTrigger: {
+      trigger: ".support",
+      start: "top top",
+      end: "center",
+      duration: 20,
+      scrub: true,
+    },
+    opacity: 0,
+  })
+  .from(".support__svg", {
+    scrollTrigger: {
+      trigger: ".support",
+      start: "top top",
+      end: "center",
+      duration: 20,
+      scrub: true,
+    },
+    opacity: 0,
+    scale: 0,
+  })
+  .from(".support__icon", {
+    scrollTrigger: {
+      trigger: ".support",
+      start: "top top",
+      end: "center",
+      duration: 20,
+      scrub: true,
+    },
+    x: -200,
+    scale: 0,
+  });
+
+gsap.to(".buysell__glow", {
+  duration: 5,
+  scale: 1.5,
+  //   autoAlpha: 0.8,
+  repeat: -1,
+  yoyo: true,
+  repeatDelay: 0.2,
+  x: -200,
 });
+
+const tlBuysell = gsap.timeline();
+
+tlBuysell
+  .from(".buysell__title", {
+    scrollTrigger: {
+      trigger: ".buysell",
+      start: "-=400 top",
+      end: "+=400",
+      duration: 20,
+      scrub: true,
+    },
+    x: -20,
+    opacity: 0,
+  })
+  .from(".buysell__subtitle", {
+    scrollTrigger: {
+      trigger: ".buysell",
+      start: "-=300 top",
+      end: "+=400",
+      duration: 20,
+      scrub: true,
+    },
+    x: 20,
+    opacity: 0,
+  })
+  .from(".buysell__items", {
+    scrollTrigger: {
+      trigger: ".buysell",
+      start: "-=300 top",
+      end: "+=400",
+      duration: 20,
+      scrub: true,
+    },
+    opacity: 0,
+  })
+  .from(".buysell-item", {
+    scrollTrigger: {
+      trigger: ".buysell",
+      start: "-=300 top",
+      end: "+=400",
+      duration: 10,
+      scrub: true,
+      markers: true,
+    },
+    stagger: 0.2,
+    x: 50,
+  });
+
+gsap.to(".first-step__glow", {
+  duration: 3,
+  scale: 1.5,
+  //   autoAlpha: 0.8,
+  repeat: -1,
+  yoyo: true,
+  repeatDelay: 0.2,
+});
+
+const tlfirstStep = gsap.timeline();
+
+tlfirstStep
+  .from(".first-step__title", {
+    scrollTrigger: {
+      trigger: ".first-step",
+      start: "-=400 top",
+      end: "+=400",
+      duration: 20,
+      scrub: true,
+    },
+    x: -20,
+    opacity: 0,
+  })
+  .from(".first-step__subtitle", {
+    scrollTrigger: {
+      trigger: ".first-step",
+      start: "-=300 top",
+      end: "+=400",
+      duration: 20,
+      scrub: true,
+    },
+    x: 20,
+    opacity: 0,
+  })
+  .from(".first-step__icon", {
+    scrollTrigger: {
+      trigger: ".first-step",
+      start: "-=600 top",
+      end: "center",
+      duration: 20,
+      scrub: true,
+    },
+    x: 0,
+    scale: 0,
+  });

@@ -409,7 +409,9 @@ ul li{
  }
 
  .support {
-
+	
+	position: relative;
+	z-index: 2;
 	&__wrapper {
 		height: 100vh;
 		display: flex;
@@ -428,6 +430,7 @@ ul li{
 	}
 
 	&__glow{
+		
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -579,6 +582,9 @@ ul li{
 	&__graph {
 		margin-left: 32px;
 	}
+	&__svg{
+		transition: all 0.5s;
+	}
 	
 }
 .positive {
@@ -590,7 +596,8 @@ ul li{
 
 //first staps
 .first-step {
-
+position: relative;
+z-index: 2;
 	&__wrapper {
 		height: 100vh;
 		display: flex;
